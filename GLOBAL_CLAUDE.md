@@ -4,6 +4,9 @@
 
 ### Angular
 
+- Use signals whereever possible
+- Use inject() rather than constructor injection
+
 - Page components should be stored in the 'src/app/pages' folder and have a suffix of '.page.' and the classnames should end in Page.
 - Shared components, such as the navbar, should be stored in 'src/app/pages/shared' and have a suffix of '.component.' and the classnames should end in Component
 - Guards should be stored in 'src/app/guards' and have a suffix of '.guard.ts' and the classnames should end in Guard
