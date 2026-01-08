@@ -4,8 +4,22 @@
 
 ### Angular
 
-- Page components should be stored in the 'src/app/pages' folder and have a suffix of '.page.'
-- Shared components, such as the navbar, should be stored in 'src/app/pages/shared' and have a suffix of '.component.'
-- Guards should be stored in 'src/app/guards' and have a suffix of '.guard.ts'
-- Services should be stored in 'src/app/services' and have a suffix of '.service.ts'
+- Page components should be stored in the 'src/app/pages' folder and have a suffix of '.page.' and the classnames should end in Page.
+- Shared components, such as the navbar, should be stored in 'src/app/pages/shared' and have a suffix of '.component.' and the classnames should end in Component
+- Guards should be stored in 'src/app/guards' and have a suffix of '.guard.ts' and the classnames should end in Guard
+- Services should be stored in 'src/app/services' and have a suffix of '.service.ts' and the classnames should end in Service
+
+### Quarkus
+- Flyway should be used for all database schema management.
+- Validation messages are stored in 'src/main/resources/ValidationMessages.properties'
+
+### Panache Framework
+- The JPA Entity classes should follow the rules:
+  - Suffix should be 'Entity'
+  - Class annotations should always include the @Entity and @Table to specify the name of the entity. 
+  - Should always include @Column with name attribute specified and any nullable information based on the schema
+  - jakarta validations should be used to validate the individual fields and should reference validation messages
+  - Fields should be public
+  - HashCode, equals and toString should be generated and present
+- Repository pattern should be used
 - 
