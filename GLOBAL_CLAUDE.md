@@ -15,6 +15,15 @@
 ### Quarkus
 - Flyway should be used for all database schema management.
 - Validation messages are stored in 'src/main/resources/ValidationMessages.properties'
+- Records should be used as DTOs everywhere possible.
+- Optional should be used for any nullable return types
+- Hibernate Validator @Valid annotations should be used on all appropriate service layer and repository layers.
+
+### REST API
+- Use openapi specification for all REST endpoints
+- REST API development should follow the three tier structure: repository, service, api
+- All data access should be performed using the repository layer and should only be accessed through a service layer.
+- The service layer should consume and return only domain objects.
 
 ### Panache Framework
 - The JPA Entity classes should follow the rules:
