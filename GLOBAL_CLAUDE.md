@@ -11,6 +11,16 @@
 - Shared components, such as the navbar, should be stored in 'src/app/pages/shared' and have a suffix of '.component.' and the classnames should end in Component
 - Guards should be stored in 'src/app/guards' and have a suffix of '.guard.ts' and the classnames should end in Guard
 - Services should be stored in 'src/app/services' and have a suffix of '.service.ts' and the classnames should end in Service
+- Create new angular projects like this
+```shell
+NG_PROJECT_NAME=crm-ng
+ng new --routing --style scss --ssr false --zoneless false --ssr false --defaults $NG_PROJECT_NAME
+cd "$NG_PROJECT_NAME"
+ng add @ng-bootstrap/ng-bootstrap --skip-confirmation
+ng generate environments
+git add .
+git commit -m 'Angular project init'
+```
 
 ### Quarkus
 - Flyway should be used for all database schema management.
@@ -18,6 +28,18 @@
 - Records should be used as DTOs everywhere possible.
 - Optional should be used for any nullable return types
 - Hibernate Validator @Valid annotations should be used on all appropriate service layer and repository layers.
+- Create new quarkus projects like this
+```
+GROUP_ID=com.deltacholabs
+ARTIFACT_ID=crm
+quarkus create app --wrapper --no-code \
+    -x config-yaml,rest-jackson,smallrye-openapi,smallrye-health,micrometer-registry-prometheus \
+    $GROUP_ID:$ARTIFACT_ID:0.0.1-SNAPSHOT
+cd "$ARTIFACT_ID"
+git init
+git add .
+git commit -m 'Quarkus project init'
+```
 
 ### REST API
 - Use openapi specification for all REST endpoints
@@ -34,7 +56,6 @@
   - Fields should be public
   - HashCode, equals and toString should be generated and present
 - Repository pattern should be used
-- 
 
 ### Documentation
 
