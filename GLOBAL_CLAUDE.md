@@ -35,3 +35,9 @@
   - HashCode, equals and toString should be generated and present
 - Repository pattern should be used
 - 
+
+### Documentation
+
+- Documentation sites are created using material for mkdocs - https://squidfunk.github.io/mkdocs-material
+- Documentation sites are hosted on github using github actions - https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions
+- 
