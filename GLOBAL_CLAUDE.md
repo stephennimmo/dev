@@ -73,4 +73,6 @@ git commit -m 'Quarkus project init'
 
 - Documentation sites are created using material for mkdocs - https://squidfunk.github.io/mkdocs-material
 - Documentation sites are hosted on github using github actions - https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions
-- 
+
+#### Markdown
+- When creating markdown tables, use spaces to make the tables readable in raw format
