@@ -69,6 +69,20 @@ git commit -m 'Quarkus project init'
 - Use TEXT over VARCHAR
 - Use `created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP` and `updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP` where it makes sense
 
+### Protobuf
+- Use proto3
+- Enum definitions always have an `UNSPECIFIED` as the 0 value
+- All values should be prefixed with the all caps snake case vaue of the name of the enum
+- Example
+```
+enum ConnectionType {
+  CONNECTION_TYPE_UNSPECIFIED = 0;
+  CONNECTION_TYPE_INITIATOR = 1;
+  CONNECTION_TYPE_ACCEPTOR = 2;
+}
+```
+
+
 ### Documentation
 
 - Documentation sites are created using material for mkdocs - https://squidfunk.github.io/mkdocs-material
