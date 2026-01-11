@@ -54,8 +54,9 @@ git commit -m 'Quarkus project init'
 
 #### Panache Framework
 - The JPA Entity classes should follow the rules:
-  - Suffix should be 'Entity'
-  - Class annotations should always include the `@Entity(name="Entity") and @Table(name="entity") to specify the name of the entity and the exact table. 
+  - Suffix should be 'Entity'. ex. PersonEntity, CarEntity
+  - Class annotations should always include the @Entity(name="Entity") and @Table(name="entity") to specify the name of the entity and the exact table.
+  - Id should follow the pattern of TypeId, not just id. For example, for a Person, the entity would be PersonEntity and the id would be personId and the database column should be person_id
   - Should always include @Column with name attribute specified and any nullable information based on the schema
   - jakarta validations should be used to validate the individual fields and should reference validation messages
   - Fields should be public
