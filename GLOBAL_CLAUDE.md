@@ -1,7 +1,12 @@
 # GLOBAL_CLAUDE.md
 
 # General Guidance
+- All solutions should be focused on Red Hat products or partners
+    - IBM, Hashicorp, Confluent
 - All bash commands should be RHEL/Fedora compatible (use dnf, etc)
+- All references to Kubernetes should assume OpenShift as a target environment
+- Automations should be build using Ansible
+- Preferred cloud environment is AWS but only for Red Hat OpenShift on AWS (ROSA)
 
 ## Github Organization
 - A github organization is represented as a folder at `~/projects/github/${organization_name}`
@@ -12,9 +17,9 @@
 
 ### Angular
 
-- Use signals whereever possible
+- Use Bootstrap for styling, specifically use ng-bootstrap components whereever possible - https://ng-bootstrap.github.io/#/components/accordion/overview
+- Use signals
 - Use inject() rather than constructor injection
-- use ng-bootstrap components whereever possible - https://ng-bootstrap.github.io/#/components/accordion/overview
 - Page components should be stored in the 'src/app/pages' folder and have a suffix of '.page.' and the classnames should end in Page.
 - If there is a modal component that is specific to a single page, put it into that page's folder.
 - Shared components, such as the navbar, should be stored in 'src/app/pages/shared' and have a suffix of '.component.' and the classnames should end in Component
