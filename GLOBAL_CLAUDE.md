@@ -63,10 +63,14 @@ git commit -m 'Quarkus project init'
 
 #### REST API
 - Use openapi specification for all REST endpoints
-- REST API development should follow the three tier structure: repository, service, api
+- REST API development should follow the three tier structure: repository, service, api. Example packages: com.examplecompany.${project_name}.{api|service|repository}
+    - The api package should contain all Resource classes as well as the Request and Response records used to define the API. The Resource classes should primarily interact with the service layer. 
+    - the service package should contain the Service classes and all the Domain records. All public methods on Service classes should produce and consume Domain records. The service layer should only interact with the repository layer. 
+    - The repository package should contain the Repository classes as well as the Entity classes. All public methods on Repository classes should produce and consume Entity classes. 
 - All data access should be performed using the repository layer and should only be accessed through a service layer.
 - The service layer should consume and return only domain objects.
 - The `@RolesAllowed` annotations should always be at the method level
+- Resource class methods for API endpoints should always return `jakarta.ws.rs.core.Response` objects with the correct HTTP status code. 
 
 #### Panache Framework
 - The JPA Entity classes should follow the rules:
