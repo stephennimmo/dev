@@ -10,7 +10,7 @@
 
 ## Github Organization
 - A github organization is represented as a folder at `~/projects/github/${organization_name}`
-- Repositories are located at `~/projects/github/${organization_name}\${repository_name}`
+- Repositories are located at `~/projects/github/${organization_name}/${repository_name}`
 - A typical organization has a documentation site located in the repository named `${organization_name}.github.io`. See Documentation Site below for more information. 
 
 ## Development
