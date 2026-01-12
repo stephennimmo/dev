@@ -14,9 +14,10 @@
 - A typical organization has a documentation site located in the repository named `${organization_name}.github.io`. See Documentation Site below for more information. 
 
 ## Development
+- Authentication and authorization should be OIDC using JWT tokens. The reference OIDC provider should be Keycloak, but should be agnostic to any OIDC provider. 
 
 ### Angular
-
+- Use the latest lts release for all development. 
 - Use Bootstrap for styling, specifically use ng-bootstrap components whereever possible - https://ng-bootstrap.github.io/#/components/accordion/overview
 - Use signals
 - Use inject() rather than constructor injection
