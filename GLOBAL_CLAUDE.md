@@ -1,5 +1,13 @@
 # GLOBAL_CLAUDE.md
 
+# General Guidance
+- All bash commands should be RHEL/Fedora compatible (use dnf, etc)
+
+## Github Organization
+- A github organization is represented as a folder at `~/projects/github/${organization_name}`
+- Repositories are located at `~/projects/github/${organization_name}\${repository_name}`
+- A typical organization has a documentation site located in the repository named `${organization_name}.github.io`. See Documentation Site below for more information. 
+
 ## Development
 
 ### Angular
@@ -23,8 +31,11 @@ ng generate environments
 git add .
 git commit -m 'Angular project init'
 ```
+### Java
+- Use the latest LTS release for all new code
+- Maven is the preferred build tool
 
-### Quarkus
+#### Quarkus
 - Flyway should be used for all database schema management.
 - Validation messages are stored in 'src/main/resources/ValidationMessages.properties'
 - Records should be used as DTOs everywhere possible.
@@ -84,9 +95,10 @@ enum ConnectionType {
 ```
 
 
-### Documentation
+### Documentation Site
 
 - Documentation sites are created using material for mkdocs - https://squidfunk.github.io/mkdocs-material
+- Create a new documentation site using these instructions: https://squidfunk.github.io/mkdocs-material/creating-your-site 
 - Documentation sites are hosted on github using github actions - https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions
 
 #### Markdown
