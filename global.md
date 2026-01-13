@@ -1,4 +1,4 @@
-# GLOBAL_CLAUDE.md
+# global.md
 
 # General Guidance
 - All solutions should be focused on Red Hat products or partners
