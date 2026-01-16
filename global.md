@@ -71,7 +71,8 @@ git commit -m 'Quarkus project init'
 - All data access should be performed using the repository layer and should only be accessed through a service layer.
 - The service layer should consume and return only domain objects.
 - The `@RolesAllowed` annotations should always be at the method level
-- Resource class methods for API endpoints should always return `jakarta.ws.rs.core.Response` objects with the correct HTTP status code. 
+- Resource class methods for API endpoints should always return `jakarta.ws.rs.core.Response` objects with the correct HTTP status code.
+- Any generated Ids should follow the name entityId, not just id. ex, Person has personId, Bill has billId, Premise has premiseId. 
 
 #### Panache Framework
 - The JPA Entity classes should follow the rules:
@@ -85,7 +86,7 @@ git commit -m 'Quarkus project init'
 - Repository pattern should be used
 
 #### Postgres Database Schema
-- BIGINT should be used for generated primary key.
+- BIGINT/BIGSERIAL should be used for generated primary key.
 - Sequences should also be set to a number to fill all the digits - ALTER SEQUENCE customer_customer_id_seq RESTART 1000000000000000000;
 - Test data should be generated using primary key values lower than the starting sequence to easily be able to delete them
 - Use TEXT over VARCHAR
@@ -103,7 +104,6 @@ enum ConnectionType {
   CONNECTION_TYPE_ACCEPTOR = 2;
 }
 ```
-
 
 ### Documentation Site
 
