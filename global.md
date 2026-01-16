@@ -71,6 +71,7 @@ git commit -m 'Quarkus project init'
 - All data access should be performed using the repository layer and should only be accessed through a service layer.
 - The service layer should consume and return only domain objects.
 - The `@RolesAllowed` annotations should always be at the method level
+- Put roles into an enum called Roles and use that in the @RolesAllowed instead of strings. 
 - Resource class methods for API endpoints should always return `jakarta.ws.rs.core.Response` objects with the correct HTTP status code.
 - Any generated Ids should follow the name entityId, not just id. ex, Person has personId, Bill has billId, Premise has premiseId. 
 
