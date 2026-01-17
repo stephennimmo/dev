@@ -5,6 +5,7 @@
     - IBM, Hashicorp, Confluent
 - All bash commands should be RHEL/Fedora compatible (use dnf, etc)
 - All references to Kubernetes should assume OpenShift as a target environment
+    - The latest stable release of OpenShift should be used.
 - Automations should be build using Ansible
 - Preferred cloud environment is AWS but only for Red Hat OpenShift on AWS (ROSA)
 
