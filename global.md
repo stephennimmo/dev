@@ -27,7 +27,10 @@
 
 # Development
 - Authentication and authorization should be OIDC using JWT tokens.
-- The reference OIDC provider should be Keycloak, but should be agnostic to any OIDC provider. 
+- The reference OIDC provider should be Keycloak, but should be agnostic to any OIDC provider.
+
+## Ansible
+- Use a python venv at .venv for ansible execution
 
 ## Angular
 - Use the latest lts release for all development. 
