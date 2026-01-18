@@ -18,6 +18,7 @@
 - OpenShift Pipelines
 - Red Hat Developer Hub
 - Red Hat Connectivity Link
+- Pull secret is at `~/.pull-secret`
 
 ## Github Organization
 - A github organization is represented as a folder at `~/projects/github/${organization_name}`
