@@ -7,7 +7,7 @@
 - All references to Kubernetes should assume OpenShift as a target environment
     - The latest stable release of OpenShift should be used.
 - Automations should be build using Ansible
-- Preferred cloud environment is AWS
+- Preferred cloud environment is AWS, us-east-2 region
 
 ## OpenShift
 - Use OpenShift gitops for all cluster configurations
