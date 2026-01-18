@@ -44,6 +44,7 @@ git commit -m 'Angular project init'
 
 #### Quarkus
 - Flyway should be used for all database schema management.
+    - Test Data for Flyway should be placed in a file named `src/main/resources/db/testdata/V999__testdata.sql` and the dev and test profiles should include the `db/testdata` folder with the `locations: db/migration,db/testdata`. 
 - Validation messages are stored in 'src/main/resources/ValidationMessages.properties'
 - Records should be used as DTOs everywhere possible.
 - Optional should be used for any nullable return types
