@@ -9,6 +9,7 @@
 - Automations should be build using Ansible
 - Preferred cloud environment is AWS, us-east-2 region
 - YAML files end in .yaml, not .yml
+- Use Quad9 for upstream DNS - 9.9.9.9, 149.112.112.112
 
 ## Ansible
 - YAML files end in .yaml, not .yml
