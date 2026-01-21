@@ -8,6 +8,10 @@
     - The latest stable release of OpenShift should be used.
 - Automations should be build using Ansible
 - Preferred cloud environment is AWS, us-east-2 region
+- YAML files end in .yaml, not .yml
+
+## Ansible
+- YAML files end in .yaml, not .yml
 
 ## OpenShift
 - Use OpenShift gitops for all cluster configurations
