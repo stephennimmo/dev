@@ -32,7 +32,10 @@
 - There should be two types of repositories: cluster and application
 - cluster repositories take a fresh cluster to being production ready.
 - application repositories deploy workloads after the cluster repositories are applied.
-- syncwaves start at 0 and are typically namespace manifests. 
+- syncwaves start at 0 and are typically namespace manifests.
+    - namespace: 0
+    - operator-group: 1
+    - subscription: 2
 
 ## Github Organization
 - A github organization is represented as a folder at `~/projects/github/${organization_name}`
