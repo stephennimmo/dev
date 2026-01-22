@@ -38,6 +38,27 @@
     - subscription: 2
 - In the kustomization.yaml file, if the resources have syncwaves, put them in syncwave order and add a comment at the end of the line with the syncwave number. ex. # sync-wave-1
 
+```
+gitops-repository/
+├── app-of-apps.yaml                                     # Root application
+├── applications/                                        # ArgoCD Application manifests
+│   ├── kustomization.yaml
+│   ├── folder1.yaml               # sync-wave-0
+│   ├── folder3.yaml               # sync-wave-1
+│   └── folder2.yaml               # sync-wave-2
+├── folder1/                           
+│   ├── kustomization.yaml
+│   └── resource.yaml              # sync-wave-0
+├── folder2/                           
+│   ├── kustomization.yaml
+│   └── resource.yaml              # sync-wave-0
+├── folder3/                           
+│   ├── kustomization.yaml
+│   └── resource.yaml              # sync-wave-0
+└── README.md
+```
+
+
 ## Github Organization
 - A github organization is represented as a folder at `~/projects/github/${organization_name}`
 - Repositories are located at `~/projects/github/${organization_name}/${repository_name}`
