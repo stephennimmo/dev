@@ -36,6 +36,7 @@
     - namespace: 0
     - operator-group: 1
     - subscription: 2
+- In the kustomization.yaml file, if the resources have syncwaves, put them in syncwave order and add a comment at the end of the line with the syncwave number. ex. #sync-wave-1
 
 ## Github Organization
 - A github organization is represented as a folder at `~/projects/github/${organization_name}`
