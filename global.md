@@ -40,8 +40,8 @@
 
 ```
 gitops-repository/
-├── app-of-apps.yaml                                     # Root application
-├── applications/                                        # ArgoCD Application manifests
+├── app-of-apps.yaml               # Root application
+├── applications/                  # ArgoCD Application manifests
 │   ├── kustomization.yaml
 │   ├── folder1.yaml               # sync-wave-0
 │   ├── folder3.yaml               # sync-wave-1
