@@ -13,6 +13,7 @@
 
 ## Ansible
 - YAML files end in .yaml, not .yml
+- Use a python venv at .venv for ansible execution
 
 ## OpenShift
 - Use OpenShift gitops for all cluster configurations
@@ -69,12 +70,9 @@ gitops-repository/
 - Authentication and authorization should be OIDC using JWT tokens.
 - The reference OIDC provider should be Keycloak, but should be agnostic to any OIDC provider.
 
-## Ansible
-- Use a python venv at .venv for ansible execution
-
 ## Angular
-- Use the latest lts release for all development. 
-- Use Bootstrap for styling, specifically use ng-bootstrap components whereever possible - https://ng-bootstrap.github.io/#/components/accordion/overview
+- Use the latest lts release for all development - which is angular version 21. 
+- Use ng-bootstrap components whereever possible - https://ng-bootstrap.github.io/#/components/accordion/overview
 - Use signals
 - Use inject() rather than constructor injection
 - Page components should be stored in the 'src/app/pages' folder and have a suffix of '.page.' and the classnames should end in Page.
