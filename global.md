@@ -92,7 +92,7 @@ git add .
 git commit -m 'Angular project init'
 ```
 ## Java
-- Use the latest LTS release for all new code
+- Use the latest LTS release for all new code - Java 25
 - Maven is the preferred build tool
 
 ### Quarkus
@@ -103,7 +103,7 @@ git commit -m 'Angular project init'
 - Configuration should be in YAML and follow the "%dev", "%test", "%prod" structure.
 - All OIDC integration should be done agnostic to the OIDC provider. It should allow for complete flexibility in which OIDC provider to use.
 - Banner turned off
-- Create new quarkus projects like this
+- Create new quarkus projects using the latest version and cli like this
 ```
 GROUP_ID=com.deltacholabs
 ARTIFACT_ID=crm
