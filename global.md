@@ -140,7 +140,7 @@ git commit -m 'Quarkus project init'
   - HashCode, equals and toString should be generated and present
 - Repository pattern should be used
 
-#### Quarkus - Postgres Database Schema
+#### Quarkus - Postgres and Flyway Database Schema
 - Use Flyway for all schema management
     - Test Data for Flyway should be placed in a file named `src/main/resources/db/testdata/V999__testdata.sql`
     - dev and test profiles should include the `db/testdata` folder with the `locations: db/migration,db/testdata` but not prod
@@ -150,7 +150,7 @@ git commit -m 'Quarkus project init'
 - Use TEXT over VARCHAR
 - Use `created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP` and `updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP` where it makes sense
 
-### Quarkus - Protobuf and gRPC
+#### Quarkus - Protobuf and gRPC
 - Use proto3
 - Enum definitions always have an `UNSPECIFIED` as the 0 value
 - All values should be prefixed with the all caps snake case vaue of the name of the enum
@@ -162,6 +162,10 @@ enum ConnectionType {
   CONNECTION_TYPE_ACCEPTOR = 2;
 }
 ```
+
+### Postgres
+- Always use BIGSERIAL and BIGINT for PRIMARY KEY fields. Do not use UUID
+- 
 
 ### Documentation Site
 
