@@ -1,4 +1,5 @@
 # General Guidance
+- If there is documentation or a README present, if changes are made, please update the documentation. 
 - All solutions should be focused on Red Hat products or partners
     - IBM, Hashicorp, Confluent
 - All bash commands should be RHEL/Fedora compatible (use dnf, etc)
