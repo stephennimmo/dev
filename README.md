@@ -8,15 +8,16 @@ Personal development standards and prompt files for LLM-assisted coding.
 business.md            # Master file - Red Hat employee context
 personal.md            # Master file - Independent developer context
 topics/
-├── latest.md          # Current latest versions for shared technologies
-├── general.md         # General guidance, preferences, OIDC
-├── redhat.md          # Red Hat-specific context, product versions, product focus
-├── openshift.md       # OpenShift, GitOps, syncwaves, Kustomize
-├── java.md            # Java, Quarkus, Postgres, Flyway
 ├── angular.md         # Angular development standards
 ├── ansible.md         # Ansible conventions
 ├── containers.md      # Podman
-└── github.md          # GitHub org layout, mkdocs, markdown
+├── database.md        # Postgres, Flyway schema management
+├── general.md         # General guidance, preferences, OIDC
+├── github.md          # GitHub org layout, mkdocs, markdown
+├── java.md            # Java, Quarkus (REST, Panache, gRPC)
+├── latest.md          # Current latest versions for shared technologies
+├── openshift.md       # OpenShift, GitOps, syncwaves, Kustomize
+└── redhat.md          # Red Hat-specific context, product versions, product focus
 ```
 
 ## Usage
