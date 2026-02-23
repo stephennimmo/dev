@@ -1,5 +1,6 @@
 # Angular
 - Create new angular projects like this
+
 ```shell
 NG_PROJECT_NAME=crm-ng
 ng new --routing --style scss --ssr false --zoneless false --ssr false --defaults $NG_PROJECT_NAME
@@ -9,6 +10,7 @@ ng generate environments
 git add .
 git commit -m 'Angular project init'
 ```
+
 - Use the latest LTS release for all development
 - Use ng-bootstrap components whereever possible - https://ng-bootstrap.github.io/#/components
 - Use signals
