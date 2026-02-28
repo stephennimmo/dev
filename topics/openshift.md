@@ -7,6 +7,7 @@
 - Red Hat Developer Hub
 - Red Hat Connectivity Link
 - Pull secret is at `~/.pull-secret`
+- OpenShift nodes should be `control-plane`, `worker` and `infrastructure`.this can
 
 ## OpenShift GitOps
 - The gitops repository has the following structure:
