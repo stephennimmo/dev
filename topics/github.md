@@ -10,3 +10,4 @@
 
 ## Markdown
 - When creating markdown tables, use spaces to make the tables readable in raw format
+- Use only three dashes - `---` - to create lines for tables. 
