@@ -13,3 +13,8 @@
 - The latest stable release of OpenShift should be used.
 - Automations should be built using Ansible
 - Always source containers from Red Hat sources such as registry.redhat.io and quay.io
+
+# Red Hat Branding
+- Use the following information to create any artifacts related to documentation - https://www.redhat.com/en/about/brand/standards
+  - https://www.redhat.com/en/about/brand/standards/color
+  - https://www.redhat.com/en/about/brand/standards/typography
