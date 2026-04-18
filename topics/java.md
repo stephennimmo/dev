@@ -59,3 +59,8 @@ enum ConnectionType {
   CONNECTION_TYPE_ACCEPTOR = 2;
 }
 ```
+
+### Quarkus - Quinoa
+- The only two additions needed for the Quinoa to run are the following:
+    - `yq -i '.quarkus.quinoa.enable-spa-routing = true' src/main/resources/application.yml`
+    - `yq -i '.quarkus.quinoa.build-dir = "dist/'$NG_PROJECT_NAME'/browser"' src/main/resources/application.yml`

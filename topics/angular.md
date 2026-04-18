@@ -12,6 +12,7 @@ git commit -m 'Angular project init'
 ```
 
 - Use the latest LTS release for all development
+- If the project is being created inside of an existing Quarkus project using Quinoa, then add `--skip-git` to the `ng new` command. 
 - Use ng-bootstrap components whereever possible - https://ng-bootstrap.github.io/#/components
 - Use signals
 - Use inject() rather than constructor injection
