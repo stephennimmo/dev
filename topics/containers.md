@@ -2,5 +2,7 @@
 - Assume Podman
 - Use `Containerfile` not `Dockerfile`
 
-# Podman and Podman Compose
+# Podman
 
+# Podman Compose
+- Don't use version
