@@ -1,27 +1,12 @@
-# Java
-- Use the latest LTS release for all new code
-- Maven is the preferred build tool
+# Quarkus
 
-## Quarkus
-- Validation messages are stored in 'src/main/resources/ValidationMessages.properties'
-- Records should be used as DTOs everywhere possible.
-- Optional should be used for any nullable return types
-- Hibernate Validator @Valid annotations should be used on all appropriate service layer and repository layers.
+Read in Java preferences at https://raw.githubusercontent.com/stephennimmo/dev/refs/heads/main/prompts/java.md
+
+## General Guidance
+
 - Configuration should be in YAML and follow the "%dev", "%test", "%prod" structure.
 - All OIDC integration should be done agnostic to the OIDC provider. It should allow for complete flexibility in which OIDC provider to use.
-- Banner turned off
-- Create new quarkus projects using the latest version and cli like this
-```
-GROUP_ID=com.deltacholabs
-ARTIFACT_ID=crm
-quarkus create app --wrapper --no-code \
-    -x config-yaml,rest-jackson,smallrye-openapi,smallrye-health,micrometer-registry-prometheus \
-    $GROUP_ID:$ARTIFACT_ID:0.0.1-SNAPSHOT
-cd "$ARTIFACT_ID"
-git init
-git add .
-git commit -m 'Quarkus project init'
-```
+- Turn off banner in quarkus configuration
 
 ### Quarkus - REST API
 - Use openapi specification for all REST endpoints
@@ -61,6 +46,13 @@ enum ConnectionType {
 ```
 
 ### Quarkus - Quinoa
+- Always put Quinoa based web projects in `src/main/webui`
 - The only two additions needed for the Quinoa to run are the following:
     - `yq -i '.quarkus.quinoa.enable-spa-routing = true' src/main/resources/application.yml`
     - `yq -i '.quarkus.quinoa.build-dir = "dist/'$NG_PROJECT_NAME'/browser"' src/main/resources/application.yml`
+
+## Quarkus - Flyway Database Schema
+- Use Flyway for all schema management
+    - Test Data for Flyway should be placed in a file named `src/main/resources/db/testdata/V999__testdata.sql`
+    - dev and test profiles should include the `db/testdata` folder with the `locations: db/migration,db/testdata` but not prod
+- Test data should be generated using primary key values lower than the starting sequence to easily be able to delete them
