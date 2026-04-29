@@ -58,6 +58,7 @@
     - The repository package should contain the Repository classes as well as the Entity classes. All public methods on Repository classes should produce and consume Entity classes.
 - All data access should be performed using the repository layer and should only be accessed through a service layer.
 - The service layer should consume and return only domain objects.
+- The api layer should only interact with the service layer. It should never directly interact with the repository layer. 
 - The `@RolesAllowed` annotations should always be at the method level
 - Put roles into an enum called Roles and use that in the @RolesAllowed instead of strings.
 - Resource class methods for API endpoints should always return `jakarta.ws.rs.core.Response` objects with the correct HTTP status code.
