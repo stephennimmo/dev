@@ -226,3 +226,25 @@ gitops-repository/
 │   └── resource.yaml              # sync-wave-0
 └── README.md
 ```
+
+if there is an operator, then use a structure like the following. 
+
+```
+gitops-repository/
+├── app-of-apps.yaml               # Root application
+├── applications/                  # ArgoCD Application manifests
+│   ├── kustomization.yaml
+│   ├── folder1-operator.yaml      # sync-wave-0
+│   ├── folder1-resources.yaml     # sync-wave-1
+│   └── folder2.yaml               # sync-wave-2
+├── folder1/
+├──── operator
+│     ├── kustomization.yaml
+│     ├── namespace.yaml           # sync-wave-0
+│     ├── operator-group.yaml      # sync-wave-1
+│     └── subscription.yaml        # sync-wave-0
+├──── resources
+│     ├── kustomization.yaml
+│     └── custom-resource.yaml     # sync-wave-0
+***
+```
