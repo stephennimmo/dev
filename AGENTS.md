@@ -191,6 +191,7 @@ git commit -m 'Angular project init'
 - The gitops repository has the following structure:
     - applications - contains the argocd application manifests and the app-of-apps root application
     - namespace folders - contains the manifests associated with the namespace, needs to use syncwaves if operators proceed CRs
+- Namespace manifests should always include labels openshift.io/cluster-monitoring: "true"
 - There should be two types of repositories: `cluster` and `application`
 - `cluster` repositories take a fresh cluster to being production ready.
 - `application` repositories deploy workloads after the cluster repositories are applied.
