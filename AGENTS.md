@@ -186,6 +186,29 @@ git commit -m 'Angular project init'
 - Pull secret is at `~/.pull-secret`
 - OpenShift nodes should be `control-plane`, `worker` and `infrastructure`. Never use `master`
 
+### OpenShift Cluster Types
+
+- **Preprod hub** - Full development platform: ACM, ACS, GitOps, Pipelines, DevSpaces, Developer Hub
+- **Prod hub** - Management only: ACM, ACS, GitOps
+- **Workload clusters** - Created by ACM, managed remotely by the hub's ArgoCD
+
+ArgoCD manages itself (operator + instance) alongside everything else.
+
+### OpenShift Cluster Naming
+
+{{ cluster_name }}.{{ env }}.{{ cluster_type }}.{{ openshift_type }}.{{ base_domain }}
+
+| Field | Values |
+|-------|--------|
+| cluster_name | dev1, lob2, bob |
+| env | preprod, dev, test, prod |
+| cluster_type | hub, workload |
+| openshift_type | ocp, ove, okd |
+
+* cluster_name is optional
+* preprod is only used to denote a hub cluster
+* ocp is full subscription, ove is only virtual machines, oke is container engine only
+
 ## OpenShift GitOps
 
 - The gitops repository has the following structure:
