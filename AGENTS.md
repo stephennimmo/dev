@@ -9,6 +9,10 @@
 - Authentication and authorization should be OIDC using JWT tokens.
 - The reference OIDC provider should be Keycloak, but should be agnostic to any OIDC provider.
 - Absolutely no sensitive information should be stored in any git repository
+- Ports
+  - Web projects should use ports like 8000, 8001, 8002, etc.
+  - Api projects should use ports like 8080, 8081, 8082, etc.
+  - Database ports should try to match the last digit for the API port like 5430, 5431, 5432, etc. 
 
 ## Red Hat
 
