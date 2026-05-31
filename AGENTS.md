@@ -131,6 +131,13 @@ git commit -m 'Angular project init'
 - Guards should be stored in 'src/app/guards' and have a suffix of '.guard.ts' and the classnames should end in Guard
 - Services should be stored in 'src/app/services' and have a suffix of '.service.ts' and the classnames should end in Service
 - All OIDC integration should be done agnostic to the OIDC provider. It should allow for complete flexibility in which OIDC provider to use.
+- when creating an interface representing a model, the id should always be prefixed with the domain object name. It shouldn't be just 'id'. ex
+```typescript
+export interface Account {
+  accountId: string;
+  name: string;
+}
+```
 
 ## Postgres
 
