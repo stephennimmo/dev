@@ -8,7 +8,6 @@ REPs act as the intermediary between the wholesale ERCOT electricity market and 
 
 ### Key Responsibilities
 
-* Customer - a customer will sign up for service thr
 * Procurement — Purchase electricity on the ERCOT wholesale market (day-ahead and real-time) or via long-term power purchase agreements (PPAs) with generators.
 * Risk Management — Hedge against price volatility using financial instruments so they can offer stable fixed-rate or variable-rate products to customers.
 * Customer Enrollment — Sign up customers by ESI ID (the unique identifier for each meter/service point in Texas), submit enrollment transactions to TDSPs via EDI.
@@ -28,7 +27,7 @@ They don't own or operate the wires (that's the TDSPs — Oncor, CenterPoint, AE
 # Retail Electric Platform
 
 ## Personas
-ough the public enrollment website. The customer will then be able to login to the customer portal and manage all of their information such as viewing contracts, their pricing, monitor their usage, view their bills, make payments and also submit service requests for the administrators.
+* Customer - a customer will sign up for service through the public enrollment website. The customer will then be able to login to the customer portal and manage all of their information such as viewing contracts, their pricing, monitor their usage, view their bills, make payments and also submit service requests for the administrators.
 * Administrator - an employee of the retail energy provider will manage the company using the administrator portal. The administrator portal will allow them to see all the customer information, but also be able to view aggregatesd views and reports, manage pricing and products, and perform all the administration tasks needed to manage the company.
 * Developer - the developer will be able to perform all the activities associated with maintaining and enhancing the projects and system configurations.
 * Operator - the operator will be able to perform maintainance and implement enhancement requests based on requests from the development teams and administrators.
