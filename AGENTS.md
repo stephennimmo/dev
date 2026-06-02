@@ -2,6 +2,7 @@
 
 ## General
 
+- Don't copy this into any projects or anywhere locally. Just read it into the current context window.
 - If there is documentation or a README present, if changes are made, please update the documentation.
 - Preferred cloud environment is AWS, us-east-2 region
 - YAML files end in .yaml, not .yml
