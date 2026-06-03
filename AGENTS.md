@@ -185,7 +185,7 @@ export interface Account {
 
 ### Markdown
 
-- When creating markdown tables, use spaces to make the tables readable in raw format
+- When creating markdown tables, use spaces to make the tables readable in raw format, Align all the vertical bars for the columns to ensure readability
 - Use only three dashes - `---` - to create lines for tables.
 
 ## OpenShift
@@ -216,7 +216,7 @@ ArgoCD manages itself (operator + instance) alongside everything else.
 |-------|--------|
 | cluster_name | dev1, lob2, bob |
 | env | preprod, dev, test, prod |
-| cluster_type | hub, workload |
+| cluster_type | hub, spoke |
 | openshift_type | ocp, ove, okd |
 
 * cluster_name is optional
