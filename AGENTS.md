@@ -11,10 +11,10 @@
 - The reference OIDC provider should be Keycloak, but should be agnostic to any OIDC provider.
 - Absolutely no sensitive information should be stored in any git repository
 - Ports
-  - Web projects like mkdocs should use ports like 8000, 8001, 8002, etc.
-  - Web projects in Angular should use ports like 4200, 4201, 4202, etc.
-  - Api projects should use ports like 8080, 8081, 8082, etc.
-  - Database ports should try to match the last digit for the API port like 5430, 5431, 5432, etc. 
+  - Web projects like mkdocs should use ports like 8001, 8002, 8003, etc.
+  - Web projects in Angular should use ports like 4201, 4202, 4203, etc.
+  - Api projects should use ports like 8081, 8082, 8083, etc.
+  - Database ports should try to match the last digit for the API port like 5431, 5432, 5433, etc. 
 
 ## Red Hat
 
@@ -174,6 +174,8 @@ export interface Account {
   - `web-` - marketing sites, docs, or mobile shells
   - `gitops-` — OpenShift GitOps layout (Argo CD, Kustomize, sync waves). Good for cluster and application GitOps repos if you name them so the role is obvious, e.g. gitops-cluster / gitops-apps or gitops-openshift-cluster / gitops-examplerep-apps.
   - `iac-` — Good for non-GitOps infra automation: Terraform for AWS accounts/networking, Ansible Automation Platform content, etc.
+  - `library-` - Good for library or helper projects to be used in other projects
+  - `integration-` - Integration projects designed to run as batch or cron scheduled jobs
 - A typical organization has a documentation site located in the repository named `${organization_name}.github.io`. See Documentation Site below for more information.
 
 ### Documentation Site
@@ -205,7 +207,7 @@ export interface Account {
 
 - **Preprod hub** - Full development platform: ACM, ACS, GitOps, Pipelines, DevSpaces, Developer Hub
 - **Prod hub** - Management only: ACM, ACS, GitOps
-- **Workload clusters** - Created by ACM, managed remotely by the hub's ArgoCD
+- **Spoke clusters** - Created by ACM, managed remotely by the hub's ArgoCD
 
 ArgoCD manages itself (operator + instance) alongside everything else.
 
