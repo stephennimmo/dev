@@ -10,6 +10,7 @@
 - Authentication and authorization should be OIDC using JWT tokens.
 - The reference OIDC provider should be Keycloak, but should be agnostic to any OIDC provider.
 - Absolutely no sensitive information should be stored in any git repository
+- When generating documentation, put the instructions and commands after a small summary. and then provide details below all the instructions. 
 - Ports
   - Web projects like mkdocs should use ports like 8001, 8002, 8003, etc.
   - Web projects in Angular should use ports like 4201, 4202, 4203, etc.
