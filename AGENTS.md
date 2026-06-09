@@ -247,45 +247,39 @@ ArgoCD manages itself (operator + instance) alongside everything else.
     - custom resource: 4
     - etc
 - In the kustomization.yaml file, if the resources have syncwaves, put them in syncwave order and add a comment at the end of the line with the syncwave number. ex. # sync-wave-1
-- Example repository structure:
+- Here's an example repository structure for the platform team's gitops repository for an environment with two hub clusters (preproduction, production) and three spoke clusters (development, integration, production)
 ```
-gitops-repository/
-├── app-of-apps.yaml               # Root application
-├── applications/                  # ArgoCD Application manifests
-│   ├── kustomization.yaml
-│   ├── folder1.yaml               # sync-wave-0
-│   ├── folder3.yaml               # sync-wave-1
-│   └── folder2.yaml               # sync-wave-2
-├── folder1/
-│   ├── kustomization.yaml
-│   └── resource.yaml              # sync-wave-0
-├── folder2/
-│   ├── kustomization.yaml
-│   └── resource.yaml              # sync-wave-0
-├── folder3/
-│   ├── kustomization.yaml
-│   └── resource.yaml              # sync-wave-0
+gitops-platform/
+├── clusters/
+│   ├── hub/
+│   │   ├── preproduction/
+│   │   │   ├── applications/
+│   │   │   │   ├── application1.yaml
+│   │   │   │   ├── application2.yaml
+│   │   │   │   └── kustomization.yaml
+│   │   │   ├── application1/
+|   |   |   |   ├── patch1.yaml
+│   │   │   │   └── kustomization.yaml
+│   │   │   ├── application2/
+│   │   │   │   └── kustomization.yaml
+│   │   │   └── app-of-apps.yaml
+│   │   └── production/
+│   └── spoke/
+│       ├── development/
+│       ├── integration/
+│       └── production/
+├── resources/
+│   ├── external-secrets-operator/
+│   │   ├── kustomization.yaml
+│   │   ├── namespace.yaml
+│   │   ├── operator-group.yaml
+│   │   └── subscription.yaml
+│   └── openshift-gitops-operator/
+│       ├── kustomization.yaml
+│       ├── namespace.yaml
+│       ├── operator-group.yaml
+│       └── subscription.yaml
+├── bootstrap.yaml
 └── README.md
 ```
 
-if there is an operator, then use a structure like the following. 
-
-```
-gitops-repository/
-├── app-of-apps.yaml               # Root application
-├── applications/                  # ArgoCD Application manifests
-│   ├── kustomization.yaml
-│   ├── folder1-operator.yaml      # sync-wave-0
-│   ├── folder1-resources.yaml     # sync-wave-1
-│   └── folder2.yaml               # sync-wave-2
-├── folder1/
-├──── operator
-│     ├── kustomization.yaml
-│     ├── namespace.yaml           # sync-wave-0
-│     ├── operator-group.yaml      # sync-wave-1
-│     └── subscription.yaml        # sync-wave-0
-├──── resources
-│     ├── kustomization.yaml
-│     └── custom-resource.yaml     # sync-wave-0
-***
-```
