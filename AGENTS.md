@@ -42,7 +42,14 @@
 - Maven is the preferred build tool
 - Records should be used as DTOs everywhere possible.
 - Optional should be used for any nullable return types
-- Don't use `@Inject`, but instead always use constructor injection. 
+- Don't use `@Inject`, but instead always use constructor injection. Example: 
+```
+private final CompanyRepository companyRepository;
+    
+public CompanyService(CompanyRepository companyRepository) {
+    this.companyRepository = companyRepository;
+}
+```
 
 ### Validation
 
