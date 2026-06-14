@@ -26,7 +26,7 @@
 - All references to Kubernetes should assume OpenShift as a target environment
 - The latest stable release of OpenShift should be used
 - Automations should be built using Ansible
-- Always use Red Hat Hardened Images from https://images.redhat.com 
+- Always use Red Hat Hardened Images from https://images.redhat.com - Example: `registry.access.redhat.com/hi/postgresql:latest`
   - Always source containers from Red Hat sources such as registry.redhat.io and quay.io
 
 ### Red Hat Branding
