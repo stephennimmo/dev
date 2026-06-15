@@ -172,6 +172,8 @@ export interface Account {
 - YAML files end in .yaml, not .yml
 - Use a python venv at .venv for ansible execution
 - Use FQCN for builtin module actions
+- When creating new ansible environments, put playbooks in a folder called "playbooks" and prepend them with "pb-"
+- 
 
 ## GitHub Organization
 
