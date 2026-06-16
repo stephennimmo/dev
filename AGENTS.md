@@ -6,16 +6,16 @@
 - If there is documentation or a README present, if changes are made, please update the documentation.
 - Preferred cloud environment is AWS, us-east-2 region
 - YAML files end in .yaml, not .yml
-- Use Quad9 for upstream DNS - 9.9.9.9, 149.112.112.112
+- Use Cloudflare for upstream DNS - 1.1.1.1
 - Authentication and authorization should be OIDC using JWT tokens.
 - The reference OIDC provider should be Keycloak, but should be agnostic to any OIDC provider.
 - Absolutely no sensitive information should be stored in any git repository
 - When generating documentation, put the instructions and commands after a small summary. and then provide details below all the instructions. 
 - Ports
-  - Web projects like mkdocs should use ports like 8001, 8002, 8003, etc.
-  - Web projects in Angular should use ports like 4201, 4202, 4203, etc.
-  - Api projects should use ports like 8081, 8082, 8083, etc.
-  - Database ports should try to match the last digit for the API port like 5431, 5432, 5433, etc. 
+  - Documentation web projects using mkdocs should use port 8000. 
+  - UI Web projects in Angular should use ports 4201, 4202, 4203, etc.
+  - API projects should use ports 8081, 8082, 8083, etc.
+  - Postgres database ports should try to match the last digit for the API port like 5431, 5432, 5433, etc. 
 
 ## Red Hat
 
