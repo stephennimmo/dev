@@ -293,3 +293,7 @@ gitops-platform/
 └── README.md
 ```
 
+## Python
+- When creating Python virtual environments, always put them at `.venv`
+- Always use `pip install -r requirements.txt`, not listing them individually like `pip install ansible boto3 botocore`
+
