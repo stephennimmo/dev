@@ -196,6 +196,9 @@ export interface Account {
 - Documentation sites are hosted on github using github actions - https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions
 - Use Python virtual environments (.venv) for any docs site
 - Always start mkdocs with --livereload
+- Try to use markdown extensions and theme features wherever feasible instead of custom code for site functionality.
+- All site related code (images, stylesheets, javascript) should be placed in a folder called `assets` in the `docs` folder. Anything outside of this folder is content.
+- Always create a README.md with the information about how to clone, create the environment, and get started on development.
 
 ### Markdown
 
