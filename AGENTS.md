@@ -63,6 +63,7 @@ public CompanyService(CompanyRepository companyRepository) {
 - Configuration should be in YAML and follow the "%dev", "%test", "%prod" structure.
 - All OIDC integration should be done agnostic to the OIDC provider. It should allow for complete flexibility in which OIDC provider to use.
 - Turn off banner in quarkus configuration
+- Always use dev services when running locally
 
 ### REST API
 
