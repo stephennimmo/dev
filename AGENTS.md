@@ -241,6 +241,7 @@ ArgoCD manages itself (operator + instance) alongside everything else.
 
 ## OpenShift GitOps
 
+- When installing the OpenShift Gitops operator, never install the default instance of argocd. Always create a custom one. 
 - The gitops repository has the following structure:
     - applications - contains the argocd application manifests and the app-of-apps root application
     - namespace folders - contains the manifests associated with the namespace, needs to use syncwaves if operators proceed CRs
