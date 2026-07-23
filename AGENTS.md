@@ -13,9 +13,8 @@
 - When generating documentation, put the instructions and commands after a small summary. and then provide details below all the instructions. 
 - Ports
   - Documentation web projects using mkdocs should use port 8000. 
-  - UI Web projects in Angular should use ports 4201, 4202, 4203, etc.
-  - API projects should use ports 8081, 8082, 8083, etc.
-  - Postgres database ports should try to match the last digit for the API port like 5431, 5432, 5433, etc. 
+  - UI Web projects in Angular should use ports 4200
+  - API projects should use ports 8080
 
 ## Red Hat
 
