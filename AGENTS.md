@@ -78,7 +78,15 @@ public CompanyService(CompanyRepository companyRepository) {
 - Put roles into an enum called Roles and use that in the @RolesAllowed instead of strings.
 - Resource class methods for API endpoints should always return `jakarta.ws.rs.core.Response` objects with the correct HTTP status code.
 - Any generated Ids should follow the name entityId, not just id. ex, Person has personId, Bill has billId, Premise has premiseId.
-- Extensive tests should always be created to test the API endpoints for the project. This is not optional. 
+- Extensive tests should always be created to test the API endpoints for the project. This is not optional.
+- Roles are done with interface. Example: 
+```
+public interface Roles {
+    String CRM_READ = "crm-read";
+    String CRM_WRITE = "crm-write";
+    String CRM_ADMIN = "crm-admin"; 
+}
+```
 
 ### Panache Framework
 
