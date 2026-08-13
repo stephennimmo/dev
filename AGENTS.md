@@ -76,7 +76,9 @@ public CompanyService(CompanyRepository companyRepository) {
 - The api layer should only interact with the service layer. It should never directly interact with the repository layer. 
 - The `@RolesAllowed` annotations should always be at the method level
 - Put roles into an enum called Roles and use that in the @RolesAllowed instead of strings.
-- Resource class methods for API endpoints should always return `jakarta.ws.rs.core.Response` objects with the correct HTTP status code.
+- Resource class methods for API endpoints should:
+  - Always return `jakarta.ws.rs.core.Response` objects with the correct HTTP status code.
+  - Use `@APIResponse` to define the response codes and the return types, as well as defining the relevant error states, such as 404 for not found or 400 for bad request. 
 - Any generated Ids should follow the name entityId, not just id. ex, Person has personId, Bill has billId, Premise has premiseId.
 - Extensive tests should always be created to test the API endpoints for the project. This is not optional.
 - Roles are done with interface. Example: 
